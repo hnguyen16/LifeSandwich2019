@@ -20,8 +20,9 @@ namespace LifeSandwich.Controllers
             foreach (string f in files)
             {
                 Image pic = new Image();
-                List<string>  s = f.Split('/').ToList();
-                pic.name = "~/Content/Images/" + s.Last();
+                string fileName =  f.Split('\\').Last();
+                pic.name = fileName.Split('.').First();
+                pic.filePath = "~/Content/Images/" + fileName; 
                 indexVM.images.Add(pic);
             }
             return View(indexVM);
