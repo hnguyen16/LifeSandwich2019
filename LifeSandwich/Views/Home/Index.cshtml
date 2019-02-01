@@ -1,4 +1,6 @@
 ﻿@model LifeSandwich.ViewModels.IndexViewModel
+@using LifeSandwich.Models
+
 @{
     ViewBag.Title = "Home Page";
 }
@@ -8,10 +10,10 @@
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
-<div>
-    @foreach(LifeSandwich.Models.Image image in Model.images)
+<div style="display: inline; text-align: center;">
+    @foreach(Image image in Model.images)
     {
-        <div style="display:inline-block; margin: 0px 10px 0px 10px;">
+        <div style="display:inline-block; margin: 0px 15px 0px 15px;">
             <img style="max-height: 200px; border: 1px solid red;"src="@Url.Content(image.filePath)" alt="@image.name" />
             <p style="font-weight:bold; font-size: 16px;">@image.name</p>
         </div>
