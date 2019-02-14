@@ -10,19 +10,12 @@ namespace LifeSandwich.Controllers
 {
     public class ImageController : Controller
     {
-        ImageRepository repository = new ImageRepository();
+        ImageCollectionDBContext context = new ImageCollectionDBContext();
         // GET: Image
+
         public ActionResult Index()
         {
             return View();
-        }
-
-        [HttpPost()]
-        public ActionResult Add(Image image)
-        {
-            repository.Add(image);
-            repository.SaveChanges();
-            return RedirectToAction("Index");
         }
     }
 }

@@ -21,8 +21,8 @@ namespace LifeSandwich.Controllers
             {
                 Image pic = new Image();
                 string fileName =  f.Split('\\').Last();
-                pic.name = fileName.Split('.').First();
-                pic.filePath = "~/Content/Images/" + fileName; 
+                pic.Name = fileName.Split('.').First();
+                pic.FilePath = "~/Content/Images/" + fileName; 
                 indexVM.images.Add(pic);
             }
             return View(indexVM);

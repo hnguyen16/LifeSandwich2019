@@ -20,7 +20,6 @@ namespace LifeSandwich.Controllers
             return View(collections);
         }
 
-        [HttpGet]
         public ActionResult Create()
         {
 
@@ -29,21 +28,46 @@ namespace LifeSandwich.Controllers
             if (!string.IsNullOrEmpty(name))
             {
                 var c = new Collection();
-                c.name = name;
+                c.Name = name;
 
                 context.Collections.Add(c);
                 context.SaveChanges();
+
+                return RedirectToAction("List");
             }
-            return RedirectToAction("List");
+            return View();
         }
 
         public ActionResult Delete(string name)
         {
-            var collection = context.Collections.SingleOrDefault(x => x.name.Equals(name, StringComparison.OrdinalIgnoreCase));
+            var collection = context.Collections.SingleOrDefault(x => x.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
             context.Collections.Remove(collection);
             context.SaveChanges();            
 
             return RedirectToAction("List");
+        }
+
+        public ActionResult Details(int id)
+        {
+            
+            var collection = context.Collections.SingleOrDefault(x => x.CollectionID == id);
+            List<Image> images = new List<Image>();
+            if (collection != null && collection.Images?.Count > 0)
+            {
+                images = collection.Images.ToList();
+            }
+
+            return View(images);
+        }
+
+        public ActionResult AddImage()
+        {
+            Image image = new Image();
+
+            //context.Collections.Add(image);
+
+
+            return View("Details");
         }
     }
 }

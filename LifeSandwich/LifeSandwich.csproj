@@ -208,6 +208,7 @@
     <Content Include="Views\Image\Add.cshtml" />
     <Content Include="Views\Collection\List.cshtml" />
     <Content Include="Views\Collection\Create.cshtml" />
+    <Content Include="Views\Collection\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

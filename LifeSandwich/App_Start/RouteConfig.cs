@@ -16,7 +16,7 @@ namespace LifeSandwich
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Collection", action = "List", id = UrlParameter.Optional }
             );
         }
     }

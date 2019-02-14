@@ -10,7 +10,7 @@ namespace LifeSandwich.Models.Repositories
     {
         public List<Collection> findCollection(string name)
         {
-            return DbSet.Where(c => c.name.Contains(name)).ToList();
+            return DbSet.Where(c => c.Name.Contains(name)).ToList();
         }
 
         //detail

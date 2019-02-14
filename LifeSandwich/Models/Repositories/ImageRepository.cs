@@ -9,7 +9,7 @@ namespace LifeSandwich.Models.Repositories
     {
         public List<Image> findImage(string name)
         {
-            return DbSet.Where(c => c.name.Contains(name)).ToList();
+            return DbSet.Where(c => c.Name.Contains(name)).ToList();
         }
     }
 }
