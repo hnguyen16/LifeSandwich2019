@@ -65,3 +65,7 @@ d:\document\visual studio 2017\Projects\LifeSandwich\LifeSandwich\bin\Microsoft.
 d:\document\visual studio 2017\Projects\LifeSandwich\LifeSandwich\obj\Debug\LifeSandwich.csprojResolveAssemblyReference.cache
 d:\document\visual studio 2017\Projects\LifeSandwich\LifeSandwich\obj\Debug\LifeSandwich.dll
 d:\document\visual studio 2017\Projects\LifeSandwich\LifeSandwich\obj\Debug\LifeSandwich.pdb
+d:\document\visual studio 2017\Projects\LifeSandwich\LifeSandwich\bin\EntityFramework.dll
+d:\document\visual studio 2017\Projects\LifeSandwich\LifeSandwich\bin\EntityFramework.SqlServer.dll
+d:\document\visual studio 2017\Projects\LifeSandwich\LifeSandwich\bin\EntityFramework.xml
+d:\document\visual studio 2017\Projects\LifeSandwich\LifeSandwich\bin\EntityFramework.SqlServer.xml
